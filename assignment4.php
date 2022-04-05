@@ -5,16 +5,26 @@ Your client said that he needs a dropdown, which contains all days of the runnin
 Day quantity is not equal for every month. Like as - february - 28, March - 31, april - 30
 So days of running month should dynamic (by php build in function) */
 
-    $running_month = date("t");
+        echo "<h3>Output all days of running month</h3>"; //HTML Headline
+        echo "<hr/>"; //HTML horizontal line
 
-    // for ($running_month = 1; $running_month <31 ; $running_month++) { 
-    //     echo $running_month;
-    //     echo "<br>";
-    // }
 
-    
-// echo    $running_month;
+//Main code here
+    $days_running_month = date("t");
 
+    for ($i = 1; $i  <= $days_running_month ; $i++) { 
+        echo $i;
+        echo "<br>";
+    }
+
+        /*Output
+        1
+        2
+        3
+        4
+        5
+        ...
+        30  */
 
 
         /* Question 02: 
@@ -23,10 +33,16 @@ You have to rotate from 1 to 100.
 Your output message should like that, “3 is a odd number”
 Not need to print even number */
 
+        echo "<h3>Odd number</h3>"; //HTML Headline
+        echo "<hr/>"; //HTML horizontal line
+
+
+//Main code here
         for ($number =1; $number  <=100 ; $number +=2) { 
             echo $number . " ". "is a odd number";
             echo "<br>";
         }
+
 
         /*Output 
             1 is a odd number
@@ -34,20 +50,33 @@ Not need to print even number */
             5 is a odd number
             7 is a odd number
             9 is a odd number
-            11 is a odd number .... */
+            .... 
+            99 is a odd number */
 
 
 
             /* Question 03: 
-
-		Factorial - I think everyone knows the word. Factorial of 4 is given below:
-
+Factorial - I think everyone knows the word. Factorial of 4 is given below:
 4! = 4*3*2*1 = 24
-
 6! = 6*5*4*3*2*1 = 720  
+So let’s calculate the factorial of 7. */
 
-So let’s calculate the factorial of 7.
-            
-            */
+
+        echo "<h3>Factorial calculation of 7</h3>"; //HTML Headline
+        echo "<hr/>"; //HTML horizontal line
+
+//Main code here
+
+    $target_number = 7;
+    $factorial = 1;
+
+        for($i = $target_number; $i >= 1; $i--) {
+            $factorial *=  $i;
+        }
+
+        echo "Factorial of 7! is = $factorial";
+
+        //Output: Factorial of 7! is = 5040
+   
 
 ?>
